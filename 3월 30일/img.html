@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="../images/flower.jpg"  width="100px" alt="민들레">
+    <img src="/images/사람없음.png" width="100px" alt="사람없음">
+    <!-- 절대경로로 하고싶으면 '/'로 시작하면됨 루트라는 뜻! FE2가 루트 -->
+    <!-- './' 는 현재 경로 '../' 이전 폴더 이런거는 상대경로 -->
+    <!-- alt 값은 이미지 불러오는데 실패했을 때 나오는 설명 내용이 없더라도 그냥 거의 필수로 넣어주자! -->
+
+    <img srcset="../images/500.png 500w, ../images/300.png 300w, ../images/150.png 150w" sizes="(min-width:960px) 500px, (min-width:640px) 300px, 900px" src="../images/150.png" alt="rabbit">
+    <!-- 여러가지 이미지를 제시를 한다 => 후에 브라우저가 판단해서 골라준다! -->
+    <!-- srcset은 큰것부터 작성해야한다!! -->
+    <!-- 이미지 자체는 변하지 않는다! -->
+    <!-- 이미지 자체를 바꾸려면 picture를 사용해야 한다! -->
+    <!-- 점진적 향상 기법!!!! 매우 중요!! -->
+
+    <picture>
+        <source srcset="../images/500.png" media="(min-width:960px)">
+        <source srcset="../images/flower.jpg" media="(min-width:640px)">
+        <img src="../images/150.png" alt="래빗!">
+    </picture>
+
+    <!-- 이미지 포맷의 종류도 꼭 알아두기! -->
+    
+
+</body>
+</html>
