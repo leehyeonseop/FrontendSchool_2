@@ -1,0 +1,62 @@
+/* Reset CSS */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+body {
+    background-image: url(images/background.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    border: 1px solid red;
+    width: 800px;
+    margin: 100px auto;
+    background-color: #ddd;
+}
+
+header.profile-header {
+    border: 1px solid blue;
+    padding: 50px 40px;
+    text-align: center;
+    color: white;
+    background-image: url(images/cover04.png);
+    background-size: cover;
+}
+
+header.profile-header img.face {
+    border: 8px solid white;
+    border-radius: 50%;
+}
+
+.profile-header h1 {
+    font-size: 100px;
+}
+
+.profile-header p {
+    border-top: 4px solid white;
+    padding: 10px 10px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+section.contents {
+    
+   
+}
+
+section.contents section {
+    background-color: white;
+}
