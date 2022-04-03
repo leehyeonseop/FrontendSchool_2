@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            text-align: center;
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul li {
+            border: 4px solid #ddd;
+            width: 400px;
+            border-radius: 20px;
+            padding: 10px 0px;
+        }
+
+        ul a[class ^= "link"]::before {
+            display: block;
+            /* border: 1px solid black; */
+            content: "";
+            width: 25px;
+            height: 25px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .link-facebook::before {
+            background: url(css_sprites.png) -94px -10px;
+        }
+
+        .link-kakao::before {
+            background: url(css_sprites.png) -10px -10px;
+        }
+
+        .link-google::before {
+            background: url(css_sprites.png) -52px -10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 이미지 태그의 갯수를 줄이기 위해 사용! => html파일 자체가 깔끔해짐, 스크린리더로 웹페이지를 탐색할 때 탐색 속도 up, 이미지 태그가 많아질수록 로딩 속도가 많이 걸림 하나의 큰 이미지만 다운을 받으면 되기 때문에 렌더링 속도에서 훨씬 빨라진다. -->
+    <div>
+        <ul>
+            <li>
+                <a href="" class="link-facebook">페이스북</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="" class="link-kakao">카카오</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="" class="link-google">구글</a>
+            </li>
+        </ul>
+    </div>
+    <!-- 어트리뷰트 셀렉터 -->
+</body>
+</html>
