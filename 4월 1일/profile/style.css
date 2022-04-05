@@ -1,0 +1,192 @@
+    /* 기본 스타일 초기화하기!!!!!!!! */
+    /* width: initial; */
+    /* 마진 initial은 0으로 계산 width의 initial은 auto로 계산된다 */
+    /* width: auto; 부모 너비 기준으로 가득 참 */
+     /* height: auto; */
+    /* width auto는 부모크기 기준으로 가득 찬다! 하지만 height auto는 자식기준으로 높이가 자동조절된다 */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* 남는공간을 여백으로 자동으로 취하겠다. */
+    /*     상하 좌우 */
+    /* 블록레벨에서 가로 정렬만 가능하다!! */
+    /* 타입 셀렉터는 위험하다! */
+    /* em은 배수 */
+    /* 높이는 자식요소에 따라 바뀌므로 굳이 안주는것이 좋을듯 */
+    /* vertical-align 찾아보기 */
+    /* width: 100% vs width: auto auto가 조금더 합리적이다 */
+    /* box-sizing: content-box; => 기본값 패딩 보더가 사이즈에 포함된다 */
+    /* box-sizing: border-box; => width를 정하면 패딩과 보더가 딱 정해진다.*/
+    /* text-align: center로 인해 h1과 p가 가운데 정렬이 아니라!!!!!
+    안에 들어있는 인라인들이 가운데 정렬이 된다! */
+    /* h1은 블록이고 그 안에 있는것들은 인라인이다 */
+    /* margin: initial 은 아직 대중적이지 아니므로 지금은 0을쓰자!! */
+    /* a태그에서 엔터를 치는순간 패딩도 아니고 마진도아닌 공백이 조금생김
+    인라인 태그의 기본적인 속성!! */
+    /* 부모와 자식간에도 마진 겹침 현상이 일어난다!! 큰쪽으로 겹친다!! */
+    /* 컨텐츠가 있으면 다시 마진이 생긴다! */
+    /* overflow: hidden; 또는 display: flow-root; 생각해보기 */
+    /* display:flow-root는 밝은 미래, IE가 멸망한 세상의 히어로 */
+    /* 클래스뒤에 숫자 붙이지마라! */
+    /* 다중클래스기법!!으로 이미지 다르게 주자!! 클래스의 꽃! */
+
+
+
+body, p, ul {
+    /* initial 초기의 */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin: 0;
+    font-size: inherit; /* 상속받겠다! initial로 하면 부모요소에 50px 줬을때 안먹는다! 따라서 inherit */
+    font-weight: inherit;
+    /* 원래 상속이 지원되는 속성은 초기화 해줄때 inherit 키워드 즐겨쓰장 상속이 지원안되면 initial 하는거임 */
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: initial;
+    color: inherit;
+}
+
+
+
+body {
+    background-image: url(images/background.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+
+
+.wrapper {
+    background-color: #ddd;
+    width: 800px;
+    margin: 100px auto;
+    
+}
+
+.header {
+    
+    background-image: url(images/cover04.png);
+    background-size: cover;
+    height: auto;
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+}
+
+/* 구체적으로 적어주는게 좋을듯! */
+.header img.profile {
+    border: 10px solid white;
+    border-radius: 50%;
+}
+
+.header h1 {
+    font-size: 100px;
+}
+
+.header p {
+    border-top: 4px solid;
+    /* background-color: salmon; */
+    /* width: fit-content; */
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+}
+
+/* .contents {
+    background-color: red;
+    padding: 1px;
+    overflow: hidden;
+    display: flow-root;
+} */
+
+.section {
+    background-image: url(images/icon-information.png);
+    background-repeat: no-repeat;
+    background-position: right 30px center; 
+    background-position: center right 30px;
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    /* 블럭레벨요소의 상하단 마진은 20 20 되더라도 통으로 20으로 되게 설계를 해놨다! 마진병합현상! 블럭레벨끼리만 일어난다! */
+}
+
+.section.skills {
+    background-image: url(images/icon-skills.png);
+}
+/* 안겹치게 순서 중요!! skills를 아래 써야한다. */
+
+.section h2 {
+    color: salmon;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.list li {
+    border-left: 5px solid #ddd;
+    padding: 2px 10px;
+}
+
+.list li:hover {
+    border-color: pink;
+    color: pink;
+}
+
+.footer {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.icon {
+
+    /* padding: 10px 20px; */
+    /* 인라인은 패딩하면 보여지긴 하지만 공간을 차지하지는 않는다! 베이스 라인은 꼼짝 하지 않는다 */
+    display: inline-block;
+    /* 중요:정렬은 텍스트의 베이스라인의 기준점으로 배치가된다 */
+    width: 48px;
+    height: 48px;
+    border-radius: 30px;
+    border: 2px solid #ddd;
+    color: white;
+    /* 이미지 스프라이트 기법 => 웹 성능 */
+    background-image: url(images/icons.png);
+    /* IR기법 */
+    text-indent: -9999px;
+    background-size: 144px 96px;
+    
+}
+
+.icon.github {
+    background-color: black;
+    background-position: left top;
+}
+
+.icon.facebook {
+    background-color: dodgerblue;
+    background-position: center top;
+}
+
+.icon.email {
+    background-color: orangered;
+    background-position: right top;
+}
+
+.icon:hover {
+    /* border-color: orangered; */
+    /* background-color: orangered; */
+    background-position-y: bottom;
+}
+
+
+
+
+/* 우선순위가 낮은거부터 단계적으로 합쳐져서 cascading! style sheet */

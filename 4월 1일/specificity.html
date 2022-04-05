@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        망원동.종찬 {
+
+        }
+
+        이.종찬 {
+
+        }
+
+        #wow {
+            background-color: gold;
+        }
+
+        .wow.wow {
+            background-color: blue;
+            /* 붙여서 쓰면 이름 두번부르면 급하다 생각 */
+        }
+
+        h1.wow.wow2 {
+            background-color: yellowgreen;
+            /* 이것보다 구체적일 수 없다! */
+        }
+
+        h1.wow {
+            background-color: purple;
+        }
+
+        .wow {
+            background-color: blue !important;
+        }
+
+        
+
+        h1 {
+            background-color: orange;
+        }
+
+        h1 {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="wow" class="wow wow2">Do My Best</h1>
+    <!-- 구체적인 셀렉터일수록 브라우저가 가치를 판단한다!! -->
+    <!-- 이씨 < 현섭 < 이현섭 이런식으로 구체적이면 순서에 상관없이 우선순위가 높다. -->
+    <!-- 망원동 .종찬 과 이.종찬 ? -->
+    <!-- 동점이면 아래것이 이긴다! -->
+    <!-- id는 유일한 이름 단 하나의 요소이므로 시각적으로 체계화하는 컨셉에 맞지 않는다. 우선순위 높이기 위해 id 쓰는것은 안좋다! -->
+    <!-- !important가 제일 쎄다! 생태계를 깨버린다.. 지양..? -->
+    <!-- .a .b - descendant 후손 모두! -->
+    <!-- .a > .b - child 직계자식 -->
+</body>
+</html>
