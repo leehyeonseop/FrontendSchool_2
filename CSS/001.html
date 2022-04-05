@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내부css, 외부css, inline css</title>
+    <style>
+        h1 {
+            color: red;
+            /* selector property value */
+        }
+    </style>
+    <link rel="stylesheet" href="001.css">
+</head>
+<body>
+    <h1>hello</h1>
+    <!-- 계단처럼 폭포처럼 내려온다! Cascading -->
+    <h1 style="color: aqua;">Hello World</h1>
+    <p>hello world</p>
+</body>
+</html>
