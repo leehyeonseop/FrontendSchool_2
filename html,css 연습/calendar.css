@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/aurora-g6f4b754d3_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+h1, p {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+header {
+    margin-top: 100px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(228, 198, 253);
+}
+
+header p{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(228, 198, 253);
+}
+
+main {
+    /* border: 5px solid red; */
+    padding: 30px;
+}
+
+
+caption {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th {
+    width: 30px;
+}
+
+table {
+    display: inline-block;
+    margin: 0px 20px;
+}
+
+.cal {
+    text-align: center;
+    padding: 20px 0;
+    /* border: 3px solid green; */
+}
+
+/* col.sun {
+    background-color: black;
+    
+} */
+
+tr>td:first-child, tr>th:first-child {
+    color: red;
+}
