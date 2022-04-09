@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+}
+
+/* 방법1 엄청 힘든 방법이다 동적으로 구성하기 힘듬 div가 늘어나니까 밑으로 떨어짐 (.dot에 float:left 줘야함) */
+
+/* .dot-wrapper {
+    width: 600px;
+    margin: 0 auto;
+} */
+
+.dot-wrapper {
+    text-align: center;
+    
+}
+
+
+
+.dot {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 100px;
+    /* height와 line-height를 동일값으로 주면 텍스트 한정으로 가운데 정렬 */
+    /* float: left; */
+    /* 가로로 배치 float:left */
+    /* margin: 0 10px; */
+    display: inline-block;
+    /* 인라인 속성을 가지기 때문에 부모요소에 text-align:center 주면 중앙정렬된다 */
+    border-radius: 50%;
+    margin: 0 -2px;
+}
+
+/* dot이 인라인블록이 되면서 텍스트화 => 엔터 하면서 띄어쓰기 공간이 생긴다
+이 공간은 폰트사이즈에 비례한다. 보통 16px이므로 4px 없애주려면 다양한 방법중 가장 무난한게 negative margin */
+
+/* 장점 : 크기가 달라져도 갯수가 달라져도 전체 가운데 정렬 유지 가능! */

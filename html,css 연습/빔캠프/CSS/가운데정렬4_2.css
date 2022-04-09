@@ -1,0 +1,39 @@
+body {
+    background-color: #ddd;
+}
+
+.one {
+    background-color: blue;
+}
+
+.two {
+    background-color: green;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.center {
+    background-color: orange;
+    position: absolute;
+    /* 원래 div라 꽉찼었는데 absolute를 주는 순간 컨텐츠의 크기만큼 줄어버린다 */
+    left: 0;
+    right: 0;
+    /* 좌,우 모두 0을 준다면 왼쪽으로 붙어야되냐 오른쪽으로 붙어야되냐? => 전체적으로 꽉차는 효과가 난다 */
+    top: 0;
+    bottom: 0;
+    /* 위와 같은 원리로 꽉차게 됨 */
+    /* margin: 30px;
+    padding: 30px;
+    border: 20px solid orangered; */
+    width: 300px;
+    height: 300px;
+    /* width height가 생기게 되면 가운데정렬이 되거나 꽉차지 않는다. 다시 왼쪽 상단으로 붙는다  */
+    margin: auto;
+    /* margin: auto;로 잡으면 가운데 정렬이된다! */
+}
+
+/* div는 블록요소! 자식이 없으면 높이가 0 블록이기 때문에 width를 줘도 눈에 보이지 않지만 옆에 가용공간은 있다! margin: 0 auto; 하면 가로 가운데 정렬된다 */
+
+/* div positon absolute 를 주면 컨텐츠 크기만큼 블록이 줄어든다 
+width height를 고정적으로 주고 absolute를 주면 우리눈에 보이지않지만 마찬가지로 가용공간이 있음 근데 위에꺼랑은 차이가 잇따 absolute 상황에서는 이 공간이 컨텐츠 크기 만큼 확 줄어든다 right0하면 공간전체가 이동 right0과 left0을 width없이 주면 꽉차게 됬었었다 하지만 width를 주고 이렇게하면 눈에는 안보이지만 가용공간이 다시 꽉 차게 늘어나게 된다. 그리고 이박스는 다시 왼쪽 상단으로 배치된다 그래서 width값을 주고 left right0을 주면 가운데 정렬이 안된다(가용공간이 꽉차게 되기때문에) 그냥 쓸 수있는 가용공간만 늘어난다 */

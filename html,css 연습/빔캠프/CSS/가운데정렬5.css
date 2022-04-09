@@ -1,0 +1,37 @@
+body {
+    background-color: #ddd;
+}
+
+.box {
+    background-color: white;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    /* 마진겹침현상 해결하기위해 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* .box의 부모인 body의 50% 이동 */
+    /* margin-left: -150px;
+    margin-top: -200px; */
+
+    /* 단점 : width, height 값이 변경되면 같이 변경해줘야함 그리고 컨텐츠가 추가가 된다면 글자가 짤리게 된다(height를 고정값을 주었기 때문에) */
+    /* 추가된 컨텐츠 만큼 자동으로 박스의 높이가 정해지도록 해야됨 */
+    /* 이러면 height: auto;를 줘야한다 => 이렇게 되면 margin-top을 얼마나 줘야하는지 모름 */
+
+    transform: translate(-50%,-50%);
+    /* 아까의 % 부모기준이지만 transform에 해당하는 모든 %의 기준점은 자기 자신의 너비,높이 기준 */
+
+    /* 장점 : height가 auto여도 된다! 컨텐츠가 늘어나도 가운데 정렬이 된다! */
+
+}
+
+.box h2 {
+    color: orange;
+}
+
+.box p {
+    padding: 0 1rem;
+}

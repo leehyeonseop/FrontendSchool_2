@@ -1,0 +1,19 @@
+.parents {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    /* margin: 30px auto; */
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: auto;
+    margin-bottom: auto; */
+}
+
+.children {
+    /* width:auto가 기본속성임=> 부모넓이를 그대로 받아옴 => 여백이없기때문에 margin:auto 안먹음 */
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+    margin: 0 auto;
+    text-align: center;
+}

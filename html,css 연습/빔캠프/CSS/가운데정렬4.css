@@ -1,0 +1,21 @@
+body {
+    background-color: #ddd;
+}
+
+.center {
+    background-color: orange;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    /* 마진 0 auto는 가로 가운데 정렬은 쉽게 할 수 있지만 세로 가운데 정렬은 하기 어렵다! */
+    /* 위 부분을 해결하려면? positon:absolute 이용 */
+    position: absolute;
+    /* 가운데로 오게 하려면 어떻게 해야할까? */
+    left: 50%;
+    /* center의 부모인 body의 너비 기준에서 50% 이동 */
+    /* 창 크기의 절반 만큼 이동! */
+    /* margin-left: -150px; */
+    top: 50%;
+    /* margin-top: -150px; */
+    transform: translate(-50%,-50%);
+}

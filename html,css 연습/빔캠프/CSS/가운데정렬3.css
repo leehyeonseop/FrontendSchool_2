@@ -1,0 +1,17 @@
+body {
+    background-color: #999;
+    }
+
+.box {
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 500px;
+}
+
+.box img {
+    vertical-align: middle;
+    /* 이미지는 line-height 기준에서 세로 가운데 정렬 text는 이미지에 상대적으로 중간에 위치 */
+}
