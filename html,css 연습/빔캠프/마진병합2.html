@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진병합2</title>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+
+        .parents {
+            background-color: yellowgreen;
+            width: 300px;
+            margin: 0 auto;
+            /* padding: 1px;
+            border: 1px solid transparent; */
+            /* 위 2가지는 해결책이라기 보다 안일어나게 하기 위한 조건 단점: 공간을 차지하기때문에 의도된 디자인과 멀어짐 */
+            overflow: hidden;
+            /* 이게 제일 좋은방법 */
+        }
+
+        .children {
+            width: 200px;
+            height: 200px;
+            background-color: dodgerblue;
+            color: rgba(255,255,255,0.2);
+            font-size: 50px;
+            text-align: center;
+            margin: 50px;
+            display: inline-block;
+            /* 이러면 해결이 되지만 가운데는 100px된다 */
+        }
+    </style>
+</head>
+<body>
+    <div class="parents">
+        <!-- 텍스트 -->
+        <div class="children">가</div>
+        <!-- 텍스트 -->
+        <div class="children">나</div>
+        <!-- 텍스트 -->
+    </div>
+</body>
+</html>
