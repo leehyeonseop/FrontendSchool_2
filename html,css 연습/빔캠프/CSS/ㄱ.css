@@ -1,0 +1,31 @@
+body {
+    background-color: #ddd;
+}
+
+.box {
+    background-color: white;
+    width: 960px;
+    /* width를 960px으로 줬지만 남은 옆 공간도 박스div의 소유다 */
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 50px auto;
+    text-align: center;
+    /* 오직 인라인만 가운데로 */
+    border-radius: 20px;
+    border-right: 5px solid #ccc;
+    border-bottom: 5px solid #999;
+}
+
+.box h1 {
+    color: orangered;
+    /* h1태그자체가 가운데 정렬된것이 아니라 안에 있는 인라인 요소들이 가운데 정렬된거임 */
+    border-bottom: 10px solid orangered;
+    background-color: aquamarine;
+    width: 250px;
+    margin: 40px auto;
+    font-size: 4rem;
+}
+
+.box p {
+    padding: 3rem;
+}
