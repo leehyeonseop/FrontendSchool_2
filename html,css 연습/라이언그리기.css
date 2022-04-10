@@ -1,0 +1,109 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #313654;
+}
+
+.ryan {
+    position: relative;
+    margin: 50px auto;
+    width: 400px;
+    height: 380px;
+    /* border: 5px solid red; */
+}
+
+.ryan .face {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    height: 367px;
+    border-radius: 100%;
+    border: 10px solid #000;
+    background-color: #d59729;
+}
+
+.ryan .ear {
+    position: absolute;
+    top: 0;
+    width: 92px;
+    height: 92px;
+    border: 10px solid #000;
+    border-radius: 100%;
+    background-color: #d59729;
+}
+
+.ryan .ear.left {
+    left: 54px;
+}
+
+.ryan .ear.right {
+    right: 54px;
+}
+
+.ryan .eyebrow {
+    position: absolute;
+    top: 106px;
+    width: 78px;
+    height: 14px;
+    border-radius: 14px;
+    background-color: #000;
+}
+
+.ryan .eyebrow.left {
+    left: 68px;
+}
+
+.ryan .eyebrow.right {
+    right: 68px;
+}
+
+.ryan .eye {
+    position: absolute;
+    top: 147px;
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    background-color: #000;
+}
+
+.ryan .eye.left {
+    left: 98px;
+}
+
+.ryan .eye.right {
+    right: 98px;
+}
+
+.ryan .nose {
+    position: absolute;
+    top: 184px;
+    left: 50%;
+    width: 32px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: #000;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.ryan .mouth {
+    position: absolute;
+    top: 191px;
+    
+    width: 73px;
+    height: 68px;
+    border: 10px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.ryan .mouth.left {
+    left: 127px;
+}
+
+.ryan .mouth.right {
+    right: 127px;
+}
+
