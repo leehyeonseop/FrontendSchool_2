@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <style>
+        .test {
+            border: 1px solid black;
+        }
+
+        .container {
+            display: inline;
+            border: 1px solid black;
+        }
+
+        .one {
+            vertical-align: top;
+        }
+
+        .two {
+            vertical-align: middle;
+        }
+
+        .three {
+            border: 10px solid black;
+        }
+
+        .four {
+            
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img width="200px" src="https://www.tvn-2.com/nacionales/Imagen-ilustrativa-gato-medio-bosque_18585331.jpg" alt=""> yello world
+    </div>
+
+    <br><br>
+
+    <div class="container">
+        <img width="200px" class="one" src="https://www.tvn-2.com/nacionales/Imagen-ilustrativa-gato-medio-bosque_18585331.jpg" alt=""> yello world
+    </div>
+
+    <br><br>
+
+    <!-- font에서 e의 중앙선이 middle입니다. -->
+    <div class="container">
+        <img width="200px" class="two" src="https://www.tvn-2.com/nacionales/Imagen-ilustrativa-gato-medio-bosque_18585331.jpg" alt=""> yello world
+    </div>
+
+    <!-- 베이스라인에 맞춰서 이미지가 정렬된다. y보면 그 아래 꽁다리 넣으려고 아래 공간이 생긴다! -->
+
+    <div class="three">
+        <img width="200px" class="four" src="https://www.tvn-2.com/nacionales/Imagen-ilustrativa-gato-medio-bosque_18585331.jpg" alt="">
+        <p>yello world</p>
+    </div>
+</body>
+</html>
