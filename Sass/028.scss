@@ -1,0 +1,5 @@
+@for $hyeonseop from 1 through 7 {
+    .photo-box:nth-child(#{$hyeonseop}) {
+        background-image: url();
+    }
+}
