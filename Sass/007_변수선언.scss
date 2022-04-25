@@ -1,0 +1,15 @@
+$hyeonseop1 : #fff;
+$hyeonseop2 : blue;
+$현섭 : red;
+$큰글자 : 34px;
+
+.one {
+    font-size: $큰글자;
+    color: $hyeonseop1;
+}
+.two {
+    color: $hyeonseop2;
+}
+.three {
+    color: $현섭;
+}

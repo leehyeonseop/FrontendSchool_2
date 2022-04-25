@@ -1,0 +1,32 @@
+// 한줄 주석입니다.
+/* 두 줄 주석입니다. */
+ul {
+    li {
+        color: red;
+        font-size: 10px;
+    }
+}
+
+.one {
+    color: red;
+    .two {
+        color: green;
+        .three {
+            color: blue;
+        }
+        .four {
+            color: black;
+        }
+    }
+
+}
+
+.two_ {
+    color: green;
+    .three_ {
+        color: blue;
+    }
+    .four_ {
+        color: black;
+    }
+}

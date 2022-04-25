@@ -1,0 +1,14 @@
+.one {
+    $value: red !global;
+    // 글로벌 키워드는 협업에 좋지 않기 때문에 거의 안쓰는것이 좋다! 쓰지말자!
+    color: $value;
+    .two {
+        color: $value;
+    }
+}
+
+.three {
+    color: $value;
+}
+
+
