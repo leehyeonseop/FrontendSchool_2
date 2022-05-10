@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        console.log('hello');
+        let obj1 = {};
+        let obj2 = obj1;
+
+        obj1.value = 100;
+        console.log(obj1);
+        console.log(obj2);
+
+        let num1 = 0;
+        let num2 = num1;
+
+        console.log(num1);
+        console.log(num2);
+
+        num1 = 100;
+
+        console.log(num1);
+        console.log(num2);
+
+        let score = 80;
+        let person = {name:'hs', age:28};
+        function changeScore(score) {
+            score = 30;
+        }
+        function changeAge(person) {
+            person.age = 40;
+        }
+
+        console.log(score);
+        console.log(person.age);
+
+        changeScore(score);
+        changeAge(person);
+
+        console.log(score); // 80
+        console.log(person.age); // 40
+
+        function change_val(name) {
+            var name = "leehs"
+        }
+
+        function main() {
+            let name = "kk";
+            console.log("변경전 : ", name);
+            change_val(name);
+            console.log("변경후 : ", name);
+        }
+
+        main();
+
+        console.log("================");
+
+        function change_val2(arr_avg) {
+            let temp = [1,2,3,4];
+            arr_avg = temp;
+        }
+
+        function main() {
+            let arr = [1,2,3];
+            console.log("변경 전 : ", arr);
+            change_val2(arr);
+            console.log("변경 후 : ", arr);
+        }
+
+        main()
+
+        console.log("================");
+        let value = [10, 1, 100, 200, 300, 10];
+        let value2 = {
+            피카츄 : 1,
+            라이츄 : 2,
+            파이리 : 3,
+            꼬부기 : 4,
+            버터플 : 5,
+            야도란 : 6,
+            피죤투 : 7,
+            또가스 : 8,
+            메타몽 : 9,
+        };
+        let value3 = {
+            피카츄 : 10,
+            라이츄 : 20,
+            파이리 : 30,
+            꼬부기 : 40,
+            버터플 : 50,
+            야도란 : 60,
+            피죤투 : 70,
+            또가스 : 80,
+            메타몽 : 90,
+        };
+        console.log(value);
+        for (let i in value) {
+            console.log(i);
+        }
+
+        for(let i in value) {
+            console.log(value[i]);
+        }
+
+        for(let i in value2) {
+            console.log(i)
+            console.log(value2[i])
+        }
+
+        for (let i in value3) {
+            console.log(i);
+            console.log(value3[i])
+        }
+
+        for (let i in 'hello world') {
+            console.log(i);
+            console.log('hello world'[i])
+        }
+
+        
+        console.log(Object.keys(value3));
+        for(let i in Object.keys(value3)) {
+            console.log(i);
+            console.log(Object.keys(value3)[i])
+        }
+
+        let 포켓몬 = Object.keys(value3);
+        for(let i in 포켓몬) {
+            console.log(i);
+            console.log(포켓몬[i]);
+        }
+
+        for (let i of [10, 20, 30, 40]) {
+            console.log(i);
+        }
+
+        for(let i of 'hello world') {
+            console.log(i);
+        }
+
+        // for(let i of value3) {
+        //     console.log(i);
+        // }
+
+        
+        console.log(Object.entries(value3));
+
+        for(let i of Object.entries(value3)) {
+            console.log(i)
+        }
+
+        for(let [i,j] of Object.entries(value3)) {
+            console.log(i);
+            console.log(j);
+        }
+
+        for(let [i,j] of [[1,2], [3,4]]) {
+            // console.log([i,j]);
+            console.log(i);
+            console.log(j);
+        }
+
+        for (let i of [[1,2], [3,4]]) {
+            console.log(i)
+        }
+
+        let arr = [[[1,2],4], [[1,2],4]];
+        for(let i of arr) {
+            console.log(i);
+        }
+        for(let [[i,j],k] of arr) {
+            console.log(i,j,k);
+        }
+
+        // let [a,b] = '10,20'.split(',');
+        // console.log(`a: ${a}`)
+        // console.log(`b: ${b}`)
+
+        let [a,b, ...c] = [10,20,30,40,50];
+        console.log(c);
+
+        let {name, age} =  {name:'hs', age:10, height:20};
+        console.log(name);
+        console.log(age);
+        // console.log(height);
+
+        let {name2, age2} = {name2:'lhs', age2:28, height:80};
+        console.log(name2);
+        console.log(age2);
+
+        let {name3, ...rest} = {name3: 'lsb', age3:26, height:50};
+        console.log(rest);
+        console.log(name3);
+
+        let a1 = [10, 20, 30];
+
+        let b1 = [1, a1, 2];
+        console.log(b1);
+
+        b1 = [1, ...a1, 2];
+        console.log(b1);
+
+        let arr1 = [3,5,1,10,8,7];
+        
+        console.log(Math.max(arr1));
+        console.log(Math.max(...arr1));
+
+        arr1 = [1, -2, 3, 4];
+        let arr2 = [8, 3, -8, 1];
+
+        console.log(Math.max(...arr1, ...arr2));
+
+        let str = 'hello world';
+        console.log([...str]);
+
+        console.log('!'.repeat(100));
+        console.log([...'!'.repeat(100)]);
+
+        let d = new Date();
+        console.log(d);
+        console.log(d.getDate());
+        console.log(d.getMonth());
+        console.log(d.getDay());
+        console.log(d.getFullYear());
+        
+        console.log('10');
+        console.log(10 + '');
+        console.log(10 + '!!');
+        console.log('10' + 10);
+
+        console.log('hello'.split(''))
+
+        arr = [11, 22, 33, 111, 2];
+        let sum = 0;
+        console.log(arr.join('').split(''));
+        arr.join('').split('').map(i => parseInt(i)).forEach(x => sum += x);
+        console.log(sum);
+        console.log('===========================')
+        sum = 0;
+        for(let i of arr) {
+            let s = i+'';
+            for (let j of s.split('')) {
+                sum += parseInt(j);
+            }
+        }
+        console.log(sum);
+
+        let myans = arr.map(x=> ''+x).join('').split('').map(j => parseInt(j)).reduce((a,b) => a+b, 0);
+        console.log(myans);
+
+        str = [11, 22, 33, 111, 2].join('');
+        console.log(str);
+        let result = 0;
+        for(let i=0; i<str.length; i++) {
+            result += parseInt(str[i], 10);
+        }
+        console.log(result)
+
+        for(var iii=0; iii<5; iii++) {
+            console.log(iii);
+        }
+
+        console.log(iii);
+
+        for(let ii=0; ii<5; ii++) {
+            console.log(ii);
+        }
+
+        // console.log(ii);
+
+        for(let i in {one:1, two:2, three:3}) {
+            console.log(i)
+        }
+
+        let [i,j,k] = [10,20,30];
+        console.log(`k: ${k}`);
+
+        let {name4, age4} = {name4:100, age4:20, height4:1};
+        console.log(name4);
+        console.log(age4);
+
+        let {name5, ...rest2} = {name5:'dfdsfa', age5:213, weight:2131};
+        console.log(name5);
+        console.log(rest2);
+
+        let [x, ...y] = [10,20,30,40];
+        console.log(x);
+        console.log(y)
+
+        let 함수3 = (x,y) => {
+            let z = x+y;
+            return z;
+        }
+
+        console.log(함수3(300,300));
+
+        function 함수4(a,b,c) {
+            c(a + b)
+        }
+        
+        함수4(10,20,console.log)
+
+        function sum3(x,y,c) {
+            c(x+y);
+            return x+y;
+        }
+
+        function documentWrite(s) {
+            document.write('콜백함수',s);
+        }
+
+        sum3(10,20,documentWrite);
+
+        (
+            function() {
+                console.log('hello world');
+            }()
+        );
+
+        (
+            function 이름() {
+                console.log('hello hello');
+            }()
+        )
+
+        // 이름();
+
+        window.onload = function() {};
+
+        function 함수6(x,y,c) {
+            c(x+y);
+            return x+y;
+        }
+
+        function aaaaa(s) {
+            document.write('콜백함수',s);
+        }
+
+        함수6(1110,20,aaaaa);
+
+        function 함수7(a,b,c) {
+            console.log(a,b,c)
+        }
+
+        함수7(200,300);
+        함수7(200,300,400,1,2,3);
+
+        function 함수7 (a,b,...c) {
+            console.log(a,b,c);
+        }
+
+        function factorial(n) {
+            return n*(n-1);
+        }
+
+        console.log(factorial(5));
+
+        function factorial(n) {
+            if(n <= 1) {
+                return n;
+            }
+            return n * factorial(n-1);
+        }
+
+        console.log(factorial(5));
+
+        let s = 1;
+        for(let i=1; i<6; i++) {
+            s *= i;
+        }
+
+        function test(a=10, b=20, c=30) {
+            return a, b, c
+        }
+
+        console.log(test());
+        console.log(test(100,200,300));
+
+        let ss = 1;
+        for (let i=5; i>0; i--) {
+            ss *= i;
+        }
+
+        console.log(ss);
+
+        function sigma(n) {
+            if(n <= 1) {
+                return n;
+            }
+            return n + sigma(n-1);
+        }
+
+        console.log(sigma(10));
+
+        result = '';
+        for (let i of 'hello world') {
+            result = i + result;
+        }
+
+        console.log(result);
+        console.log('hello'.length);
+
+        function reverse(txt) {
+            txt += '';
+            if(txt.length <= 1) {
+                return txt;
+            }
+            return reverse(txt.slice(1)) + txt[0];
+        }
+
+        console.log(reverse(101111123))
+        console.log(reverse('abcd'));
+        console.log(reverse('fefwefew'))
+
+        arr= [10,20,30];
+        function 함수(value) {
+            value[0] = 1000;
+        }
+
+        함수(arr);
+        console.log(arr);
+
+        x = 0;
+        function 함수2(value) {
+            value = 1000;
+        }
+
+        함수2(x);
+        console.log(x);
+
+        console.log("===============================");
+
+        a = {};
+        console.log(a);
+        function 함수300(b) {
+            b = 1000;
+        }
+        함수300(a);
+        console.log(a);
+
+        a= [];
+        함수300(a);
+        console.log(a);
+
+        a = 1000;
+        function test(x) {
+            x = 1;
+        }
+        test(a);
+        console.log(a);
+        console.log(test(a));
+
+        arr = [10, 20, 30];
+
+        function test2(x) {
+            x[0] = 1000;
+        }
+
+        test2(arr);
+        console.log(arr);
+
+    </script>
+</body>
+</html>
