@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        .box {
+            height: 500px;
+            background-color: black;
+        }
+
+        .btn-list {
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-around;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="btn-list">
+            <button type="button" class="btn-blue">파랑</button>
+            <button type="button" class="btn-yellow">노랑</button>
+            <button type="button" class="btn-green">초록</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.btn-blue').addEventListener('click', function () {
+            document.querySelector('.box').classList.toggle('blue')
+            document.querySelector('.box').classList.remove('yellow')
+            document.querySelector('.box').classList.remove('green')
+        })
+
+        document.querySelector('.btn-yellow').addEventListener('click', function () {
+            document.querySelector('.box').classList.toggle('yellow')
+            document.querySelector('.box').classList.remove('blue')
+            document.querySelector('.box').classList.remove('green')
+        })
+
+        document.querySelector('.btn-green').addEventListener('click', function () {
+            document.querySelector('.box').classList.toggle('green')
+            document.querySelector('.box').classList.remove('yellow')
+            document.querySelector('.box').classList.remove('blue')
+        })
+    </script>
+</body>
+</html>
