@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preventDefault</title>
+</head>
+<body>
+    <p>안녕하세요!</p>
+
+    <script>
+        // const body = document.querySelector('body');
+        // window.addEventListener('contextmenu', event => {
+        //     event.preventDefault();
+
+        // })
+
+        // 마우스 우클릭햇을때 나오는 메뉴가 contextmenu
+        document.addEventListener('contextmenu', (event) => {
+            event.preventDefault();
+            alert('오른쪽 클릭이 제한 됩니다!');
+        })
+    </script>
+</body>
+</html>

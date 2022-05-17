@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function NewFactory(name) {
+            this.name = name;
+        }
+
+        NewFactory.prototype.sayYourName = function() {
+            console.log(`삐리비리비 제 이름은 ${this.name} 입니다!!`)
+        }
+
+        const robot1 = new NewFactory('이현섭');
+
+        const foods = ['짜장면', '볶음밥', '해장국', '치킨'];
+        function FoodBot(foodNames) {
+            this.menu = foodNames;
+        }
+
+
+        FoodBot.prototype.sayMenu = function() {
+            console.log(this.menu[Math.floor(Math.random() * foods.length)]);
+        }
+
+        const foodBotMark1 = new FoodBot(foods)
+
+    </script>
+</body>
+</html>
