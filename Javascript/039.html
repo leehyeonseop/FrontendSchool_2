@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 전역스코프 함수스코프 블록스코프 -->
+    <!-- 스코프란 ? : 변수의 생존 범위! -->
+
+    <script>
+        // var func1 = function() {
+        //     var a = 1;
+        //     var b = 2;
+        //     console.log(a + b);
+        //     // return a + b;
+        // }
+
+        // var a = 20
+        // 위에 a = 1를 주석처리하면 답은 22된다 안에 없으면 부모에서 찾고 거기에 없으면 또 부모에서 찾고 => 스코프체인
+        // 스코프의 또다른 기능 : 자동으로 메모리를 관리하게 도움을 준다!
+        // 함수는 실행될때 메모리를 차지하고 종료되면 사라진다!
+
+        // func1();
+
+        // var func = function() {
+        //     var a = 1;
+        //     var b = 2;
+
+        //     var func2 = function() {
+        //         var b = 5;
+        //         var c = 6;
+        //         a = a + b + c;
+        //         console.log(a)
+        //     }
+
+        //     func2();
+        // }
+
+        // func();
+
+        function test() {
+            var var1 = 'hello';
+            var var2 = 'world';
+        }
+
+        test();
+
+        console.log(var1);
+        console.log(var2);
+        // 전역공간에서 함수안에 접근할 수 없다!! 근데 함수에서 var 부분빼면 또 접근이 된다. why? var빼고 var1만 해서 선언하면 전역인 효과
+
+
+
+
+
+
+    </script>
+</body>
+</html>

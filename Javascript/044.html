@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Robot {
+            // 클래스의 생성자 함수입니다. 하나의 클래스는 하나의 생성자만 정의할 수 있습니다. 
+                // 그리고 생성자 함수는 new 키워드가 호출될때 자동으로 실행됩니다.
+            constructor(name) {
+                this.name = name;
+            }
+
+            // 메소드를 정의합니다. 메소드는 클래스가 생성한 인스턴스를 통해 사용할 수 있습니다.
+            sayYourName() {
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+        }
+
+        class BabyRobot extends Robot {
+            constructor(name) {
+                super(name)
+                // constructor(name) {
+                // this.name = name;    ==> 요게 super(name)
+                // }
+                this.ownName = '아이크';
+            }
+
+            sayBabyName() {
+                this.sayYourName();
+                console.log('Suceeding you, Father!')
+            }
+
+            // cunstructor 생략가능 (추가 안할때 => super가 자동으로 적용된다고 보면됨)
+            // 하지만 뭐 추가하려면 cunstroctor , super 사용
+            // super함수는 this보다 먼저 실행되어야 한다.
+        }
+
+        const baby = new BabyRobot('현섭');
+
+
+        // - 실습 : 소시지를 만드는 클래스를 정의해봅시다.
+        // 1. 생성자 함수는 두 가지 매개변수를 전달 받을 수 있으며 전달되는 매개변수에 따라 소시지의 맛이 결정됩니다.
+        // 2. 소시지 객체는 taste 라는 메서드가 존재합니다. 생성자함수에서 전달받은 재료에 따라 맛을 나타내는 콘솔로그를 출력하는 역할을 합니다. (예시 : ‘소고기’ 와 ‘파’ 를 매개변수로 전달하였을 경우, ‘소고기와 파 맛이 난다!’ 는 콘솔 메세지를 출력합니다.)
+        // 3. 소시지 클래스를 상속받는 FiresSausage 파생클래스를 생성해봅니다. 파생클래스의 taste 메서드를 실행하면 콘솔 메세지에 불맛이 나기 시작합니다.
+
+        class Sausage {
+            constructor(taste1, taste2) {
+                this.taste1 = taste1;
+                this.taste2 = taste2;
+            }
+
+            taste() {
+                console.log(`${this.taste1} 와 ${this.taste2} 맛이 난다!!!`)
+            }
+        }
+
+        class FireSausage extends Sausage {
+            // constructor(taste1, taste2) {
+            //     super(taste1, taste2)
+            // }
+
+            firetaste() {
+                this.taste();
+                console.log('불맛이 나기 시작합니다!!!')
+            }
+        }
+
+        const sausage = new Sausage('파','소고기');
+        const fireSausage = new FireSausage('파','소고기');
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var outer = function() {
+            var a = 1; // =>비공개(자바에서의 private?) 다른곳에서는 접근할 수 없지만, 특정 함수에서는 접근 할수 있게 만드는것을 클로저
+
+            var inner = function() {
+                var b = 6;
+                var c = 7;
+                a = a + b + c;
+
+                console.log(a);
+            }
+
+            // inner()
+            return inner;
+        }
+
+        // outer();
+        var newInner = outer();
+        newInner(); // 14가 나온다 왜일까? 함
+        
+        console.log(a); // => 절대안됨
+
+        // 그런데 만약 내부 함수가 외부 함수보다 오래 살아 있는 경우에, 외부함수에 있던 변수들은 어떻게 될까요?
+        // 내부함수가 외부함수보다 오래 살아 남을 경우 ??? 가 있따!!
+        // closure 중단하다 폐쇄하다
+
+        // 강령술 함수안에 함수를 선언하고 그 외부함수가 return되면 사라지는데  내부함수를 꺼내서 다시 살린다?
+    </script>
+</body>
+</html>
