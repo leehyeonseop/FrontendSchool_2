@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // case.1
+        var me = {age : 30};
+        var you = me;
+        // {age:30} 참조하는 카운트 : 2
+
+        me = null;
+        // {age:30} 참조하는 카운트 : 1
+        console.log(you);
+
+        you = null;
+        // {age:30} 참조하는 카운트 : 0 ==> 가비지 컬렉션 대상이 됩니다.
+
+
+        // case.2
+        var x = {
+            y : {
+                z : 1
+            }
+        }
+
+        // x가 참조하는 객체는 obj1, y가 참조하는 객체는 obj2
+
+        var a = x; // obj1의 참조카운트 : 2 (x,a)
+        x = 1;     // obj1의 참조카운트 : 1 (a)
+
+        var b = a.y; // obj2의 참조카운트 : 2 (a.y, b)
+        a = 2;       // obj2의 참조카운트 : 1 (b), obj1 참조카운트 : 0
+        
+        // obj1의 참조카운트는 0이지만 그 안에 obj2의 참조카운트가 1로 남아있따 => 따라서 가비지컬렉터가 제거하지 않게 된다.
+
+        // obj1 불필요하게 남아있기 때문에 메모리 누수 발생!!!
+        // 객체끼리 서모 맞물려있어 제거되지 않던 문제(순환 참조 문제) => 교안참조이제 해결되었음
+
+        // case.3 클로져 메모리 누수문제
+
+        function outer() {
+            let privateVal = ['test'];
+            // 클로저 : 외부에서 접근할 수 없는 폐쇄된 공간
+            function getPrivate() {
+                return privateVal;
+            }
+
+            return getPrivate;
+        }
+
+        const private = outer();
+        let secretVal = private();
+
+        console.log(secretVal);
+
+        // 이처럼 클로저의 주의할점은 메모리를 낭비할수 있다 return을해서 outer함수는 사라져야하지만, privateval을 지금 secretval이 참조하고있으므로  ==> 따라서 연결을 끊어줘야한다 (null이라던지 undefined로 혹은 1 이런식으로)
+
+        // 쓰고 제대로 버리자!
+    </script>
+</body>
+</html>

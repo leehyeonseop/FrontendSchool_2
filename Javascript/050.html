@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outer() {
+            let val = 'test'
+
+            function inner() {
+                console.log(val);
+            }
+
+            return inner;
+        }
+
+        const innerFunc = outer();
+
+        innerFunc();
+
+        // 여기 까지가 클로저! 외부에서 접글할수 없는 프라이빗한 공간을 만들어내는 테크닉
+        // 함수의 상위 스코프를 결정하는 방법 => 렉시컬 스코프
+        // 렉시컬 : 어휘(語彙)란 어떤 특정한 범위 내에서 사용되는 낱말의 총 집합 (정적 스코프) / 맥락에 따라 결정되는 스코프
+        // 동적스코프는 함수가 실행되는 시점에 함수의 상위 스코프가 결정된다.
+        // 다이나믹 스코프(동적 스코프) - 함수가 실행되는 시점에 상위 스코프가 결정이 된다.
+
+        // sub add {
+        //     $balance += shift;
+        // }
+
+        // sub transaction_a {
+        //     local $balance = 0;
+        //     say add(1);
+        //     transaction_b();             ===> 동적 스코프의 예시 (펄 언어)
+        //     say add(100);
+        // }
+
+        // sub transaction_b {
+        //     local $balance = 5;
+        //     say add(10);
+        // }
+
+
+    </script>
+</body>
+</html>
