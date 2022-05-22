@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #move {
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            transform: translate();
+        }
+    </style>
+</head>
+<body>
+    <div id="move"></div>
+
+
+    <script>
+        const $moveBox = document.querySelector('#move');
+        window.addEventListener('keydown', (e) => {
+            console.log(e.key);
+            let xLocation = 0;
+            let yLocation = 0;
+            switch(e.key) {
+                case 'ArrowLeft':
+                    xLocation += 10;
+                    $moveBox.style.transform = 'translate(`${xLocation}px`)'
+                    break;
+                case 'ArrowRight':
+                    $moveBox.style.transform = 'translate(20px)'
+                    break;
+                case 'ArrowDown':
+                    $moveBox.style.transform = 'translate(30px)'
+                    break;
+                case 'ArrowUp':
+                    $moveBox.style.transform = 'translate(40px)'
+                    break;
+            }
+        })
+    </script>
+</body>
+</html>

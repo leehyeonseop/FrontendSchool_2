@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const me = {
+            name : '이현섭',
+            address : '대전 동구 삼성동',
+            phoneNum : '010-2000-7362',
+            canProgramming : function (language) {
+                console.log(`${language}를 사용할 수 있다!`);
+                language.funlevup();
+            }
+        }
+
+        const language = {
+            level : 1,
+            one : 'python',
+            two : 'java',
+            three : 'JavaScript',
+            funlevup : function() {
+                this.level++;
+                console.log('나의 프로그래밍 능력이 올랏다!!');
+                console.log(this.level);
+            }
+        }
+
+        let arr = new Array(4);
+        console.log(arr);
+    </script>
+</body>
+</html>

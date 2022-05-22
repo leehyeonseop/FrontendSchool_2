@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Food(arr) {
+            let randomIndex = Math.floor(Math.random() * arr.length)
+            this.food = arr[randomIndex];
+            this.printFood = function() {
+                console.log(`당신의 오늘 음식메뉴는 ${this.food} 입니다.`)
+            }
+        }
+
+        let arr = ['치킨','피자','삼겹살','탕수육','짜장면','짬뽕','김치볶음밥'];
+
+    </script>
+</body>
+</html>
