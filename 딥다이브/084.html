@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function repeat(n, f) {
+            for(let i = 0; i < n; i++) {
+                f(i)
+            }
+        }
+
+        // const logAll = function(i) {
+        //     console.log(i);
+        // }
+        // repeat(5,logAll)
+
+        // const odd = function(i) {
+        //     if(i % 2) {
+        //         console.log(i)
+        //     }
+        // }
+
+        // repeat(100, odd)
+
+        repeat(5,function(i) {console.log(i)})
+
+        repeat(100, function(i) {
+            if(i % 2) console.log(i)
+        })
+
+        // 외부상태를 변경하거나 외부상태에 의존하게 되는 비순수함수를 지양. 순수함수를 지향하자.
+        // 비순수함수는 외부 상태를 변경하므로 상태 변화를 추적하기 어려워진다.
+    </script>
+</body>
+</html>

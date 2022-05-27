@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- attributes 프로퍼티는 getter만 존재하는 읽기 전용 프로퍼티 -->
+    <input id="user" type="text" value="ungmo2">
+
+    <script>
+        // const {attributes} = document.getElementById('user');
+        // console.log(attributes)
+        const a = document.getElementById('user').attributes;
+        console.log(a)
+        console.log(a.id.value)
+        console.log(a.type.value)
+        console.log(a.value.value)
+
+    </script>
+</body>
+</html>

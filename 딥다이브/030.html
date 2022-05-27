@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="foo">
+        text
+    </div>
+
+    <script>
+        const $foo = document.getElementById('foo');
+        $foo.insertAdjacentHTML('beforebegin', '<p>beforebegin입니다.</p>');
+
+        $foo.insertAdjacentHTML('afterbegin', '<p>afterbegin입니다!</p>')
+
+        $foo.insertAdjacentHTML('beforeend', '<p>beforeend입니다!</p>');
+
+        $foo.insertAdjacentHTML('afterend', '<p>afterend입니다!</p>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits"></ul>
+
+    <script>
+        const $fruits = document.getElementById('fruits');
+
+        const $container = document.createElement('div');
+
+        ['Apple', 'Banana', 'Orange'].forEach(i => {
+            const $li = document.createElement('li');
+            const textNode = document.createTextNode(i);
+            $li.appendChild(textNode);
+            $container.appendChild($li);
+        });
+
+        $fruits.appendChild($container);
+        // DOM을 한번만 변경하지만 불필요한 DIV태그가 생성되므로 바람직하지 않다!
+        // 이러한 문제를 해결하기위해 서브DOM 느낌인 DocumentFragment 노드를 통해 해결할 수 있다.
+    </script>
+</body>
+</html>

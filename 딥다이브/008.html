@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li>apple</li>
+        <li>banana</li>
+    </ul>
+
+    <script>
+        const $fruits = document.getElementById('fruits');
+        console.log($fruits);
+
+        const a = $fruits.childNodes;
+        console.log(a);
+
+        // [...childNodes].forEach(x => $fruits.removeChild(x));
+
+
+    </script>
+</body>
+</html>

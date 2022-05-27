@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 이벤트 핸들러 => 이벤트가 발생했을때 브라우저에 호출을 위임한 함수. 다시말해, 이벤트가 발생하면 브라우저에 의해 호출될 함수 -->
+    <!-- 이벤트 핸들러 어트리뷰트 방식은 이제 잘 사용하지 않는것이 좋다. -->
+
+    <button onclick="sayHi('lee')">click me</button>
+
+    <script>
+        function sayHi(name) {
+            console.log(`Hi~ ${name}`);
+        }
+    </script>
+</body>
+</html>

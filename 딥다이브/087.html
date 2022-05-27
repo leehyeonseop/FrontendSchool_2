@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 'global x';
+        var y = 'global y';
+        var z = "zzzzz"
+        function outer() {
+            // var z = "outer' local z";
+
+            console.log(x); // x
+            console.log(y); // y
+            console.log(z); // z
+
+            function inner() {
+                var x = "inner's local x";
+
+                console.log(x) // inner's local x
+                console.log(y) // global y
+                console.log(z) 
+            }
+
+            inner();
+        }
+
+        outer();
+
+
+    </script>
+</body>
+</html>

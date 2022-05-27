@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>test</div>
+    <ul id="fruits">
+        <li>apple</li>
+        <li>banana</li>
+    </ul>
+
+    <script>
+        const $fruits = document.getElementById('fruits');
+        const $li = document.createElement('li');
+        $li.appendChild(document.createTextNode('orange'));
+
+        $fruits.insertBefore($li, null)
+
+        // insertBefore(newNode, childNode)
+    </script>
+</body>
+</html>

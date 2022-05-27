@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = 'global';
+
+        function foo() {
+            console.log(x);
+            var x = 'local'
+        }
+
+        foo()
+        console.log(x);
+
+        // 호이스팅은 스코프를 단위로 동작한다
+        // 호이스팅은 변수 선언이 스코프의 선두로 끌어 올려진 것처럼 동작하는 자스의 고유의 특징
+    </script>
+</body>
+</html>

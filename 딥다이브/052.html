@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click click</button>
+
+    <script>
+
+        const $btn = document.querySelector('button');
+        
+        const $handleClick = () => console.log('버튼클릭됨');
+
+        // 이벤트 핸들러 등록하기
+        $btn.addEventListener('click', $handleClick);
+
+        // 제거 (인수는 무조건 동일해야 삭제됨 => 무명함수를 이벤트 핸들러로 등록하게 되면 제거가 불가능 하다.)
+        $btn.removeEventListener('click', $handleClick, false)
+
+
+          // 제거 (인수는 무조건 동일해야 삭제됨 => 무명함수를 이벤트 핸들러로 등록하게 되면 제거가 불가능 하다.)
+        $btn.addEventListener('click', () => console.log('무명함수제거불가'))
+        // 등록한 이벤트를 참조할 수 없기 때문에 제거 불가
+        // 단 한번 사용하고 제거는 가능함 함수 내부에서 실행하기
+
+        $btn.addEventListener('click', function foo() {
+            console.log('한번만 실행되고사라집니다.')
+            $btn.removeEventListener('click', foo)
+        })
+    </script>
+</body>
+</html>

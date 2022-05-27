@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="user" type="text" value="ungmo2">
+    <script>
+        // attributes 는 읽기만 가능 => get set 사용
+        const $input = document.getElementById('user');
+
+        const inputValue = $input.getAttribute('value');
+        console.log(inputValue);
+
+        $input.setAttribute('value', 'change~');
+        console.log($input.getAttribute('value'));
+    </script>
+</body>
+</html>

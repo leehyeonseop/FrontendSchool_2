@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="fruit apple">apple</li>
+        <li class="fruit banana">banana</li>
+        <li class="fruit orange">orange</li>
+    </ul>
+
+    <script>
+        const $elems = document.getElementsByClassName('fruit');
+        console.log($elems);
+        [...$elems].forEach(x => x.style.color = 'gold');
+
+        const $apples = document.getElementsByClassName('fruit apple');
+        [...$apples].forEach(x => x.style.color = 'red');
+    </script>
+</body>
+</html>

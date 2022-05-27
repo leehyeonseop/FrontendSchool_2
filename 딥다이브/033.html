@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+    </ul>
+
+    <script>
+        const $fruits = document.getElementById('fruits');
+        // console.log($fruits.children)
+        // const $li = document.createElement('li');
+        // $li.appendChild(document.createTextNode('apple'));
+        // $fruits.appendChild($li);
+        const [a, b] = $fruits.children;
+        // console.log(a);
+        // console.log(b.textContent);
+        // 이미 존재하는 노드를 appendChild 또는 insertBefore로 추가하면 현재위치에서 제거하고 새로운 위치에 추가한다!
+        $fruits.appendChild(a);
+        $fruits.insertBefore(b, $fruits.lastElementChild)
+
+    </script>
+</body>
+</html>

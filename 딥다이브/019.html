@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="foo">Hello <span>world!</span></div>
+
+    <script>
+        const $foo = document.getElementById('foo');
+        console.log(foo.textContent);
+        console.log(foo.innerHTML);
+        $foo.innerHTML = '<p>안녕하세요 문단 내용입니다.</p>';
+        console.log($foo.innerHTML);
+    </script>
+</body>
+</html>
