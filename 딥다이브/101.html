@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Circle(radius) {
+            if(!new.target) {
+                return new Circle(radius)
+            }
+
+            this.radius = radius;
+            this.getDiameter = function() {
+                return 2 * this.radius;
+            };
+        }
+
+        const circle = Circle(5);
+        console.log(circle)
+        console.log(circle.getDiameter())
+
+        // 일급 객체
+        // 1. 무명의 리터럴로 생성할 수 있따.
+        // 2. 변수나 자료구조에 저장할 수 있다.
+        // 3. 함수의 매개변수나 반환값으로 사용할 수 있다.
+
+
+    </script>
+</body>
+</html>

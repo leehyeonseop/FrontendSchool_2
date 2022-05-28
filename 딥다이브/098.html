@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 리터럴 방식 vs 생성자 함수 방식 
+        // 동일한 형식의 객체를 만들때는 생성자 함수가 더 효율적
+        function Circle(radius) {
+            this.radius = radius;
+            this.getDiameter = function() {
+                return 2 * this.radius;
+            }
+        }
+
+        const circle1 = new Circle(5);
+        const circle2 = new Circle(10);
+
+        // this
+        // 1. 일반 함수로서 호출하면 this => window
+        // 2. 메서드로서 호출하면  => 메서드를 호출한 객체를 가리킴
+        // 3. 생성자 함수로서 호출 => 생성자 함수가 미래에 생성할 인스턴스
+
+        function foo() {
+            console.log(this);
+        }
+
+        foo()
+
+        const obj = { foo };
+        obj.foo();
+        const inst = new foo();
+
+        const circle3 = Circle(15);
+
+        // console.log(circle3)
+
+        console.log(radius);
+
+
+
+
+    </script>
+</body>
+</html>
