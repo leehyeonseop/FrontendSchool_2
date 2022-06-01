@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function multiply(x, y) {
+        //     const iterator = arguments[Symbol.interator]();
+        // }
+
+        function sum() {
+            let res = 0;
+
+            for(let i=0; i < arguments.length; i++) {
+                res += arguments[i]
+            }
+
+            return res;
+        }
+
+        // arguments 객체는 매개변수 개수를 확정할 수 없는 가변인자 함수를 구현할 때 유용
+
+        console.log(sum(0))
+        console.log(sum(1, 2))
+        console.log(sum(1,2 , 3))
+    </script>
+</body>
+</html>

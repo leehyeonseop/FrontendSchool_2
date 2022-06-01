@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function sum() {
+        //     const array = Array.prototype.slice.call(arguments);
+        //     return array.reduce(function(pre, cur) {
+        //         return pre + cur;
+        //     }, 0);
+        // }
+
+        function sum(...args) {
+            return args.reduce((pre, cur) => pre + cur, 0)
+        }
+
+        console.log(sum(1, 2));
+        console.log(sum(1, 2, 3, 4, 5));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Circle(radius) {
+            this.radius = radius;
+        }
+
+        Circle.prototype.getArea = function() {
+            return Math.PI * this.radius ** 2;
+        };
+
+        const c1 = new Circle(5);
+        const c2 = new Circle(10);
+
+        console.log(c1.getArea === c2.getArea);
+
+        // 프로토타입 객체(프로토타입) 이란?
+        // 객체지향 프로그래밍의 근간을 이루는 객체 간 상속을 구현하기 위해 사용된다.
+
+        // 프로토타입은 어떤객체의 부모객체의 역할을 하는 객체로서 다른 개체에 공유 프로퍼티를 제공한다.
+
+        // 모든 객체는 하나의 프로토타입을 갖는다. 그리고 모든 프로토타입은 생성자 함수와 연결되어있다.
+    </script>
+</body>
+</html>
