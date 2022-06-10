@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function.prototype.apply, Function.prototype.call 메서드는 this로 사용할 객체와 인수 리스트를 인수로 전달받아 함수를 호출한다.
+
+        function getThisBinding() {
+            console.log(arguments)
+            return this;
+        }
+
+        // console.log(getThisBinding())
+
+        const thisArg = {a : 1};
+
+        console.log(getThisBinding.apply(thisArg, [1,2,3]))
+        console.log(getThisBinding.call(thisArg, 1, 2, 3))
+    </script>
+</body>
+</html>

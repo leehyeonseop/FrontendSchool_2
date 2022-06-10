@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const person = {
+        //     name : 'lee',
+        //     getName() {
+        //         console.log(this);
+        //         return this.name;
+        //     }
+        // }
+    
+        // console.log(person.getName())
+    
+        // this 바인딩은 함수 호출 방식에 따라 동적으로 결정된다.
+        const foo = function() {
+            console.dir(this);
+        }
+    
+        foo();
+
+        const obj = {foo};
+        obj.foo()
+
+        new foo()
+
+        const bar = {name : 'bar'};
+        console.log(bar)
+
+        foo.call(bar)
+        foo.apply(bar)
+        foo.bind(bar)();
+    </script>
+</body>
+</html>
