@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const x = 1;
+
+        function outer() {
+            const x = 10;
+            const inner = function () {console.log(x)}
+            return inner
+        }
+
+        const innerFunc = outer();
+        innerFunc()
+
+        // 1. outer 함수를 실행
+        // 2. inner를 반환하고 생명주기 마감 => const x = 10에 접근 불가해보임
+        // 3. 하지만 결과는 10
+        // 이처럼 외부함수보다 중첩함수가 더 오래 유지되는 경우 중첩 함수는 이미 생명주기가 종료한 외부함수의 변수를 참조할 수 있다. 이러한 중첩 함수를 클로저 라고 한다.
+    </script>
+</body>
+</html>

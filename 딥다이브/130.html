@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const counter = (function() {
+        //     let num = 0;
+        //     return {
+        //         increase() {
+        //             return ++num;
+        //         },
+
+        //         decrease() {
+        //             return num > 0 ? --num : 0;
+        //         }
+        //     }
+        // }())
+
+        // console.log(counter.increase())
+        // console.log(counter.increase())
+        // console.log(counter.decrease())
+        // console.log(counter.decrease())
+        // console.log(counter.decrease())
+
+        const Counter = (function() {
+            let num = 0;
+
+            function Counter() {
+                console.log('g2')
+            }
+
+            Counter.prototype.increase = function() {
+                return ++num;
+            }
+
+            Counter.prototype.decrease = function() {
+                return num > 0 ? --num : 0;
+            }
+
+            return Counter;
+        }())
+
+        const counter = new Counter();
+    </script>
+</body>
+</html>

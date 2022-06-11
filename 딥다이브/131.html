@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function makeCounter(aux) {
+            let counter = 0;
+
+            return function () {
+                counter = aux(counter);
+                return counter
+            }
+        }
+
+        function increase(n) {
+            return ++n;
+        }
+
+        function decrease(n) {
+            return --n;
+        }
+
+        const increaser = makeCounter(increase)
+        console.log(increaser());
+        console.log(increaser());
+        console.log(increaser());
+
+        const decreaser = makeCounter(decrease);
+        console.log(decreaser());
+        console.log(decreaser());
+
+        console.log(increaser());
+
+    </script>
+</body>
+</html>
