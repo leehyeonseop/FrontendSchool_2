@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let people = ["수빈", "소민", "현섭", "수진", "혜원", "재준"];
+
+        function findName(name) {
+        for (let i = 0; i < people.length; i++) {
+            if (name == people[i]) {
+            // console.log("good");
+            }
+        }
+        }
+        findName("수빈");
+
+        for (let i in people) {
+        // console.log(people[i]);
+        }
+
+        people.forEach(function (a) {
+        // console.log(a);
+        });
+
+        function feOcean(name) {
+        people.forEach((a) => {
+            if (a == name) {
+            console.log(a);
+            }
+        });
+        }
+        feOcean("수빈");
+
+        function findName(name) {
+        for (const i of people) {
+            if (i == name)
+            console.log("있어요");
+        }
+        }
+
+        findName("수빈");
+    </script>
+</body>
+</html>
