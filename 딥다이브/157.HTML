@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. 객체 생성
+        const xhr = new XMLHttpRequest();
+
+        // 2. HTTP 요청 초기화
+        xhr.open('GET', '/users');
+
+        // 3. HTTP 헤더 설정
+        //    클라이언트가 서버로 전송할 데이터의 MIME 타입 지정 : json
+        xhr.setRequestHeader('content-type', 'application/json');
+
+        // 4. 전송
+        xhr.send();
+    </script>
+</body>
+</html>
