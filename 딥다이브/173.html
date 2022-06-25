@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const wrongUrl = 'https://jsonplaceholder.typicode.com/XXX/1'
+
+        // fetch(wrongUrl)
+        //     .then(() => console.log('ok'))
+        //     // 잘못 된 url 이여도 ok 뜸
+        //     .catch(() => console.log('error'))
+
+
+        const wrongUrl = 'https://jsonplaceholder.typicode.com/XXX/1'
+
+        fetch(wrongUrl)
+            .then(res => {
+                if(res.ok === false) throw new Error(res.statusText);
+                return res.json()
+            })
+            .then(todo => console.log(todo))
+            .catch(err => console.log(err))
+    </script>
+</body>
+</html>

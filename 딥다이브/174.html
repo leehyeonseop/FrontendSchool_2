@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const request = {
+            get(url) {
+                return fetch(url);
+            },
+
+            post(url, payload) {
+                return fetch(url, {
+                    method: 'POST',
+                    headers: {'content-Type' : 'application/json'},
+                    body: JSON.stringify(payload)
+                })
+            },
+
+            patch(url, payload) {
+                return fetch(url, {
+                    method : 'PATCH',
+                    headers : {'content-Type' : 'application/json'},
+                    body : JSON.stringify(payload)
+                })
+            },
+
+            delete(url) {
+                return fetch(url, {method : 'DELETE'})
+            }
+        }
+
+        // request.get('https://jsonplaceholder.typicode.com/todos/1')
+        // .then(res => res.json())
+        // .then(res2 => console.log(res2))
+
+        // request.post('https://jsonplaceholder.typicode.com/todos', {
+        //     userId : 1,
+        //     title : 'JavaScript',
+        //     completed : false
+        // }).then(res => {
+        //     if(!res.ok) throw new Error(res.statusText);
+        //     return res.json()
+        // }).then(console.log)
+        // .catch(console.error)
+
+        // request.patch('https://jsonplaceholder.typicode.com/todos/1', {
+        //     completed : true
+        // }).then(res => {
+        //     if(!res.ok) throw new Error(res.statusText);
+        //     return res.json();
+        // })
+        // .then(todo => console.log(todo))
+        // .catch(console.error)
+
+        request.delete('https://jsonplaceholder.typicode.com/todos/1')
+            .then(res => {
+                if(!res.ok) throw new Error(res.statusText);
+                return res.json();
+            })
+            .then(console.log)
+            .catch(console.error)
+        
+    </script>
+</body>
+</html>

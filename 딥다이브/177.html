@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const myFunc = async function() {
+        //     const a = await new Promise(resolve => setTimeout(() => resolve(1), 3000))
+        //     const b = await new Promise(resolve => setTimeout(() => resolve(2), 2000))
+        //     const c = await new Promise(resolve => setTimeout(() => resolve(3), 1000))
+
+        //     console.log([a, b, c])
+        // }
+
+        // myFunc()
+
+        // const myFunc = async function() {
+        //     const res = await Promise.all([
+        //         new Promise(resolve => setTimeout(() => resolve(1), 3000)),
+        //         new Promise(resolve => setTimeout(() => resolve(2), 2000)),
+        //         new Promise(resolve => setTimeout(() => resolve(3), 1000))
+        //     ])
+
+        //     console.log(res)
+        // }
+
+        // myFunc()
+
+        const OrderedFunc = async function(n) {
+            const a = await new Promise(resolve => setTimeout(() => resolve(n), 3000));
+            const b = await new Promise(resolve => setTimeout(() => resolve(a+1), 2000));
+            const c = await new Promise(resolve => setTimeout(() => resolve(b+1), 1000));
+
+            console.log([a, b, c])
+        }
+
+        OrderedFunc(8)
+    </script>
+</body>
+</html>
